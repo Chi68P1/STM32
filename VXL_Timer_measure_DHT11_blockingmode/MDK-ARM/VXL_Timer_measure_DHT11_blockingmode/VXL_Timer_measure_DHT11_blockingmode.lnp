@@ -1,0 +1,24 @@
+--cpu Cortex-M3
+"vxl_timer_measure_dht11_blockingmode\startup_stm32f103xb.o"
+"vxl_timer_measure_dht11_blockingmode\main.o"
+"vxl_timer_measure_dht11_blockingmode\stm32f1xx_it.o"
+"vxl_timer_measure_dht11_blockingmode\stm32f1xx_hal_msp.o"
+"vxl_timer_measure_dht11_blockingmode\stm32f1xx_hal_gpio_ex.o"
+"vxl_timer_measure_dht11_blockingmode\stm32f1xx_hal_tim.o"
+"vxl_timer_measure_dht11_blockingmode\stm32f1xx_hal_tim_ex.o"
+"vxl_timer_measure_dht11_blockingmode\stm32f1xx_hal.o"
+"vxl_timer_measure_dht11_blockingmode\stm32f1xx_hal_rcc.o"
+"vxl_timer_measure_dht11_blockingmode\stm32f1xx_hal_rcc_ex.o"
+"vxl_timer_measure_dht11_blockingmode\stm32f1xx_hal_gpio.o"
+"vxl_timer_measure_dht11_blockingmode\stm32f1xx_hal_dma.o"
+"vxl_timer_measure_dht11_blockingmode\stm32f1xx_hal_cortex.o"
+"vxl_timer_measure_dht11_blockingmode\stm32f1xx_hal_pwr.o"
+"vxl_timer_measure_dht11_blockingmode\stm32f1xx_hal_flash.o"
+"vxl_timer_measure_dht11_blockingmode\stm32f1xx_hal_flash_ex.o"
+"vxl_timer_measure_dht11_blockingmode\stm32f1xx_hal_exti.o"
+"vxl_timer_measure_dht11_blockingmode\stm32f1xx_hal_uart.o"
+"vxl_timer_measure_dht11_blockingmode\system_stm32f1xx.o"
+--strict --scatter "VXL_Timer_measure_DHT11_blockingmode\VXL_Timer_measure_DHT11_blockingmode.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "VXL_Timer_measure_DHT11_blockingmode.map" -o VXL_Timer_measure_DHT11_blockingmode\VXL_Timer_measure_DHT11_blockingmode.axf

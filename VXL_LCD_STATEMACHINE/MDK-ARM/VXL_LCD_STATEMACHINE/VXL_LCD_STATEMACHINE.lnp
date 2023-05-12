@@ -1,0 +1,27 @@
+--cpu=Cortex-M4.fp.sp
+"vxl_lcd_statemachine\startup_stm32f401xc.o"
+"vxl_lcd_statemachine\chi_lcd.o"
+"vxl_lcd_statemachine\main.o"
+"vxl_lcd_statemachine\stm32f4xx_it.o"
+"vxl_lcd_statemachine\stm32f4xx_hal_msp.o"
+"vxl_lcd_statemachine\stm32f4xx_hal_tim.o"
+"vxl_lcd_statemachine\stm32f4xx_hal_tim_ex.o"
+"vxl_lcd_statemachine\stm32f4xx_hal_uart.o"
+"vxl_lcd_statemachine\stm32f4xx_hal_rcc.o"
+"vxl_lcd_statemachine\stm32f4xx_hal_rcc_ex.o"
+"vxl_lcd_statemachine\stm32f4xx_hal_flash.o"
+"vxl_lcd_statemachine\stm32f4xx_hal_flash_ex.o"
+"vxl_lcd_statemachine\stm32f4xx_hal_flash_ramfunc.o"
+"vxl_lcd_statemachine\stm32f4xx_hal_gpio.o"
+"vxl_lcd_statemachine\stm32f4xx_hal_dma_ex.o"
+"vxl_lcd_statemachine\stm32f4xx_hal_dma.o"
+"vxl_lcd_statemachine\stm32f4xx_hal_pwr.o"
+"vxl_lcd_statemachine\stm32f4xx_hal_pwr_ex.o"
+"vxl_lcd_statemachine\stm32f4xx_hal_cortex.o"
+"vxl_lcd_statemachine\stm32f4xx_hal.o"
+"vxl_lcd_statemachine\stm32f4xx_hal_exti.o"
+"vxl_lcd_statemachine\system_stm32f4xx.o"
+--strict --scatter "VXL_LCD_STATEMACHINE\VXL_LCD_STATEMACHINE.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "VXL_LCD_STATEMACHINE.map" -o VXL_LCD_STATEMACHINE\VXL_LCD_STATEMACHINE.axf

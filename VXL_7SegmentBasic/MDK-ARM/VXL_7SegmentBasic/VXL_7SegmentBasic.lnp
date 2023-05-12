@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"vxl_7segmentbasic\startup_stm32f103xb.o"
+"vxl_7segmentbasic\main.o"
+"vxl_7segmentbasic\stm32f1xx_it.o"
+"vxl_7segmentbasic\stm32f1xx_hal_msp.o"
+"vxl_7segmentbasic\stm32f1xx_hal_gpio_ex.o"
+"vxl_7segmentbasic\stm32f1xx_hal_tim.o"
+"vxl_7segmentbasic\stm32f1xx_hal_tim_ex.o"
+"vxl_7segmentbasic\stm32f1xx_hal.o"
+"vxl_7segmentbasic\stm32f1xx_hal_rcc.o"
+"vxl_7segmentbasic\stm32f1xx_hal_rcc_ex.o"
+"vxl_7segmentbasic\stm32f1xx_hal_gpio.o"
+"vxl_7segmentbasic\stm32f1xx_hal_dma.o"
+"vxl_7segmentbasic\stm32f1xx_hal_cortex.o"
+"vxl_7segmentbasic\stm32f1xx_hal_pwr.o"
+"vxl_7segmentbasic\stm32f1xx_hal_flash.o"
+"vxl_7segmentbasic\stm32f1xx_hal_flash_ex.o"
+"vxl_7segmentbasic\stm32f1xx_hal_exti.o"
+"vxl_7segmentbasic\system_stm32f1xx.o"
+--strict --scatter "VXL_7SegmentBasic\VXL_7SegmentBasic.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "VXL_7SegmentBasic.map" -o VXL_7SegmentBasic\VXL_7SegmentBasic.axf

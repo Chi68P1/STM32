@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"vxl_gpio_expand\startup_stm32f103xb.o"
+"vxl_gpio_expand\main.o"
+"vxl_gpio_expand\stm32f1xx_it.o"
+"vxl_gpio_expand\stm32f1xx_hal_msp.o"
+"vxl_gpio_expand\stm32f1xx_hal_gpio_ex.o"
+"vxl_gpio_expand\stm32f1xx_hal_tim.o"
+"vxl_gpio_expand\stm32f1xx_hal_tim_ex.o"
+"vxl_gpio_expand\stm32f1xx_hal.o"
+"vxl_gpio_expand\stm32f1xx_hal_rcc.o"
+"vxl_gpio_expand\stm32f1xx_hal_rcc_ex.o"
+"vxl_gpio_expand\stm32f1xx_hal_gpio.o"
+"vxl_gpio_expand\stm32f1xx_hal_dma.o"
+"vxl_gpio_expand\stm32f1xx_hal_cortex.o"
+"vxl_gpio_expand\stm32f1xx_hal_pwr.o"
+"vxl_gpio_expand\stm32f1xx_hal_flash.o"
+"vxl_gpio_expand\stm32f1xx_hal_flash_ex.o"
+"vxl_gpio_expand\stm32f1xx_hal_exti.o"
+"vxl_gpio_expand\system_stm32f1xx.o"
+--strict --scatter "VXL_GPIO_EXPAND\VXL_GPIO_EXPAND.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "VXL_GPIO_EXPAND.map" -o VXL_GPIO_EXPAND\VXL_GPIO_EXPAND.axf
