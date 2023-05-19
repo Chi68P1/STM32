@@ -21,8 +21,6 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
-// Select LCD_8bit or LCD_4bit in chi_LCD.c
 #include "hchi_LCD.h"
 
 #include <stdio.h>
@@ -39,8 +37,6 @@
 #define B2_PRESSED	GPIO_PIN_RESET //0
 #define B3_PRESSED	GPIO_PIN_RESET //0
 #define B4_PRESSED	GPIO_PIN_RESET //0
-#define LED_ON 			GPIO_PIN_SET   //1
-#define LED_OFF 		GPIO_PIN_RESET
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -56,8 +52,15 @@ uint8_t B1 = 0;
 uint8_t B2 = 0;
 uint8_t B3 = 0;
 uint8_t B4 = 0;
-uint8_t LED = LED_OFF;
-uint8_t SystemState = 0;
+uint8_t B1SystemState = 0;
+uint8_t B2SystemState = 0;
+uint8_t B3SystemState = 0;
+uint8_t B4SystemState = 0;
+uint32_t count = 86395;
+uint32_t ON_cnt =0;
+uint8_t sec =0;
+uint8_t min =0;
+uint8_t hour =0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -70,11 +73,15 @@ static void MX_USART1_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-FILE __stdout;
-int fputc(int ch, FILE *f)
+/*struct __FILE
 {
-  /* Your implementation of fputc(). */
-	HAL_UART_Transmit(&huart1,(uint8_t *)&ch, 1, 100);
+  int handle;
+};*/
+FILE __stdout;
+int fputc(int ch, FILE *f) 
+{
+	HAL_GPIO_WritePin(LCD_RS_GPIO_Port,LCD_RS_Pin,GPIO_PIN_SET); // data
+	LCD_put((uint8_t)ch);
   return ch;
 }
 /* USER CODE END 0 */
@@ -109,19 +116,22 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
+	LCD_init();
+	
+	
 	HAL_GPIO_WritePin(LOAD_GPIO_Port, LOAD_Pin,GPIO_PIN_SET);
 	HAL_GPIO_WritePin(SCK_GPIO_Port, SCK_Pin,GPIO_PIN_SET);
 	uint8_t DATAIN = 0;
+	
+		
   /* USER CODE END 2 */
-
+	
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
 		// Scan Input
-		
-		
 		HAL_GPIO_WritePin(LOAD_GPIO_Port, LOAD_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(LOAD_GPIO_Port, LOAD_Pin, GPIO_PIN_SET);
 		DATAIN = 0;
@@ -135,33 +145,66 @@ int main(void)
 		B2 =  (DATAIN >>5&1);
 		B3 = (GPIO_PinState) (DATAIN & 0x40);
 		B4 = (GPIO_PinState) (DATAIN & 0x80);
-		printf("%d\n",B2);
-		//HAL_Delay(500);
-		// State control
-		if ((SystemState == 0) && ((B1 == B1_PRESSED) || (B2 == B2_PRESSED) || (B3== B3_PRESSED) || (B4 == B4_PRESSED)))
-				SystemState = 1;
-		else if ((SystemState == 1) && ((B1 != B1_PRESSED) && (B2 != B2_PRESSED) && (B3 != B3_PRESSED) && (B4 != B4_PRESSED)))
-				SystemState = 2;
-		else if ((SystemState == 2) && ((B1 == B1_PRESSED) || (B2 == B2_PRESSED) || (B3 == B3_PRESSED) || (B4 == B4_PRESSED)))
-				SystemState = 3;
-		else if ((SystemState == 3) && ((B1 != B1_PRESSED) && (B2 != B2_PRESSED) && (B3 != B3_PRESSED) && (B4 != B4_PRESSED)))
-				SystemState = 0;
 
+		// State control
+		if ((B1SystemState == 0) && (B1 == B1_PRESSED))
+				B1SystemState = 1;
+		else if ((B1SystemState == 2) && (B1 != B1_PRESSED))
+				B1SystemState = 0;
+		
+		
+		if ((B2SystemState == 0) && (B2 == B2_PRESSED))
+				B2SystemState = 1;
+		else if ((B2SystemState == 2) && (B2 != B2_PRESSED))
+				B2SystemState = 0;
+		
+		
+		if ((B3SystemState == 0) && (B3 == B3_PRESSED))
+				B3SystemState = 1;
+		else if ((B3SystemState == 2) && (B3 != B3_PRESSED))
+				B3SystemState = 0;
+		
+		if ((B4SystemState == 0) && (B4 == B4_PRESSED))
+				B4SystemState = 1;
+		else if ((B4SystemState == 2) && (B4 != B4_PRESSED))
+				B4SystemState = 0;
+		
 		// Output control
-		if (SystemState == 0)
-			LED = LED_OFF;
-		else if (SystemState == 1)
-			LED = LED_ON;
-		else if (SystemState == 2)
-			LED = LED_ON;
-		else if (SystemState == 3)
-			LED = LED_OFF;
+		if (B1SystemState == 1) {
+			B4SystemState = 2;
+			count = count +1 ;
+			B1SystemState = 2;
+		}
+		else if (B2SystemState == 1) {
+			B4SystemState = 2;
+			count = count -1 ;
+			B2SystemState = 2;
+		}
+		else if  (B3SystemState == 1) {
+			B4SystemState = 2;
+			count = 0;
+			B3SystemState = 2;
+		}
+		else if  (B4SystemState == 1) {
+				if (ON_cnt < 40) // 	thoi gian tang khong chinh xac
+				{
+					LCD_gotoXY(0,0);
+					printf("%02d:%02d:%02d",hour,min,sec);
+				}
+				else { ON_cnt = 0; count = count +1;} // reset
+				ON_cnt+=1;
+				HAL_Delay(1);
+			//B4SystemState = 2;
+		}
+		if (count > 86399) count = 0;
+		hour = count/3600;
+		min = (count%3600)/60;
+		sec = (count%3600)%60;
+
 		
 		// Output
-		if (LED ==LED_OFF)
-			HAL_GPIO_WritePin(LCD_LED_GPIO_Port,LCD_LED_Pin,LED_OFF);
-		else if (LED == LED_ON)
-			HAL_GPIO_WritePin(LCD_LED_GPIO_Port,LCD_LED_Pin,LED_ON);
+		LCD_gotoXY(0,0);
+		printf("%02d:%02d:%02d",hour,min,sec);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

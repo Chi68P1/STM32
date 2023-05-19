@@ -22,19 +22,19 @@ Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
 C:\Users\Asus\Documents\STM32\VXL_test\MDK-ARM\VXL_test.uvprojx
-Project File Date:  03/30/2023
+Project File Date:  05/15/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'VXL_test'
 ../Core/Src/main.c(99): error: type specifier missing, defaults to 'int'; ISO C99 and later do not support implicit int [-Wimplicit-int]
-                * PA = 0B00000000000000000000001000100010;
-                  ^~
+                *PA = 0B00000000000000000000001000100010;
+                 ^~
 ../Core/Src/main.c(98): note: expanded from macro 'PA'
                 #define PA (volatile *)0x40010800UL
                             ~~~~~~~~  ^
 ../Core/Src/main.c(101): error: type specifier missing, defaults to 'int'; ISO C99 and later do not support implicit int [-Wimplicit-int]
-                        *(PA+3)=0B00000000000000000000000000000111;
+                        *(PA+3)=0B00000000000000000000000000000011;
                           ^~
 ../Core/Src/main.c(98): note: expanded from macro 'PA'
                 #define PA (volatile *)0x40010800UL

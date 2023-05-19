@@ -22,15 +22,10 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
-
-//struct __FILE
-//{
- // int handle;
-  /* Whatever you require here. If the only file you are using is */
-  /* standard output using printf() for debugging, no file handling */
-  /* is required. */
-//};
-
+/*struct __FILE
+{
+  int handle;
+};*/
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -55,12 +50,11 @@ UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
 FILE __stdout;
-int fputc(int ch, FILE *f)
+int fputc(int ch, FILE *f) 
 {
   HAL_UART_Transmit(&huart1,(uint8_t *)&ch,1,HAL_MAX_DELAY);
   return ch;
 }
-
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -75,7 +69,7 @@ static void MX_USART1_UART_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 uint8_t OneWire_ReadBit(void) {
-	#define DELAY50US  200 // 200*0.25 us = 50 us
+	#define DELAY50US  200
 	while(HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_1)==0);
 	__HAL_TIM_SET_COUNTER(&htim1,0);
 	while(HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_1)!=0);
@@ -84,6 +78,7 @@ uint8_t OneWire_ReadBit(void) {
 	else
 		return 0;
 }
+
 /* USER CODE END 0 */
 
 /**
@@ -125,8 +120,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    /* USER CODE END WHILE */
-		/*Configure GPIO pin : PA1 */
+    /* USER CODE END WHILE */ 
+		/*Configure GPIO pin : PA1 */ // pull_up
 			GPIO_InitStruct.Pin = GPIO_PIN_1;
 			GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
 			GPIO_InitStruct.Pull = GPIO_PULLUP;

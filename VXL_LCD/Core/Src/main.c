@@ -65,7 +65,7 @@ static void MX_GPIO_Init(void);
 /* USER CODE BEGIN 0 */
 
 /* LCD initilize sequence ------------------ */ 
-#define LCD_4bit 				 // Select LCD_8bit or LCD_4bit
+#define LCD_8bit 				 // Select LCD_8bit or LCD_4bit
 // #define LCD_useBF				 // 
 // ============================================
 #define CMD					0  		 // PutType
