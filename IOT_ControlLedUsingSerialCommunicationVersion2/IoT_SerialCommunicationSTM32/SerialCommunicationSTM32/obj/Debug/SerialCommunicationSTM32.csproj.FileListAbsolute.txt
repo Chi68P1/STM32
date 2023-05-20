@@ -1,0 +1,10 @@
+E:\IoT\SerialCommunicationSTM32\SerialCommunicationSTM32\bin\Debug\SerialCommunicationSTM32.exe.config
+E:\IoT\SerialCommunicationSTM32\SerialCommunicationSTM32\bin\Debug\SerialCommunicationSTM32.exe
+E:\IoT\SerialCommunicationSTM32\SerialCommunicationSTM32\bin\Debug\SerialCommunicationSTM32.pdb
+E:\IoT\SerialCommunicationSTM32\SerialCommunicationSTM32\obj\Debug\SerialCommunicationSTM32.csprojAssemblyReference.cache
+E:\IoT\SerialCommunicationSTM32\SerialCommunicationSTM32\obj\Debug\SerialCommunicationSTM32.Form1.resources
+E:\IoT\SerialCommunicationSTM32\SerialCommunicationSTM32\obj\Debug\SerialCommunicationSTM32.Properties.Resources.resources
+E:\IoT\SerialCommunicationSTM32\SerialCommunicationSTM32\obj\Debug\SerialCommunicationSTM32.csproj.GenerateResource.cache
+E:\IoT\SerialCommunicationSTM32\SerialCommunicationSTM32\obj\Debug\SerialCommunicationSTM32.csproj.CoreCompileInputs.cache
+E:\IoT\SerialCommunicationSTM32\SerialCommunicationSTM32\obj\Debug\SerialCommunicationSTM32.exe
+E:\IoT\SerialCommunicationSTM32\SerialCommunicationSTM32\obj\Debug\SerialCommunicationSTM32.pdb

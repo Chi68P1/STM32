@@ -473,14 +473,14 @@ ARM Macro Assembler    Page 8
               00000400 
               00000200 
               00000000 
-Command Line: --debug --xref --diag_suppress=9931,A1950W --cpu=Cortex-M3 --depe
-nd=vxl_gpio_expand_595\startup_stm32f103xb.d -ovxl_gpio_expand_595\startup_stm3
-2f103xb.o -I.\RTE\_VXL_GPIO_EXPAND_595 -IC:\Users\Asus\AppData\Local\Arm\Packs\
-ARM\CMSIS\5.9.0\CMSIS\Core\Include -IC:\Users\Asus\AppData\Local\Arm\Packs\Keil
-\STM32F1xx_DFP\2.4.0\Device\Include --predefine="__EVAL SETA 1" --predefine="__
-UVISION_VERSION SETA 538" --predefine="_RTE_ SETA 1" --predefine="STM32F10X_MD 
-SETA 1" --predefine="_RTE_ SETA 1" --list=startup_stm32f103xb.lst startup_stm32
-f103xb.s
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=vxl_gpio_expand_595\startup_stm32f103xb.d -ovxl_gpio_expand_595\st
+artup_stm32f103xb.o -I.\RTE\_VXL_GPIO_EXPAND_595 -IC:\Users\Asus\AppData\Local\
+Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include -IC:\Users\Asus\AppData\Local\Arm\
+Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include --predefine="__EVAL SETA 1" --pre
+define="__UVISION_VERSION SETA 538" --predefine="_RTE_ SETA 1" --predefine="STM
+32F10X_MD SETA 1" --predefine="_RTE_ SETA 1" --list=startup_stm32f103xb.lst sta
+rtup_stm32f103xb.s
 
 
 

@@ -85,7 +85,7 @@ int fputc(int ch, FILE *f)
   return ch;
 }
 /* USER CODE END 0 */
-
+uint8_t  a = 2;
 /**
   * @brief  The application entry point.
   * @retval int
@@ -130,9 +130,10 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+		if( a == 3 ) HAL_GPIO_WritePin(LCD_LED_GPIO_Port,LCD_LED_Pin,1);
     /* USER CODE END WHILE */
 		// Scan Input
-		HAL_GPIO_WritePin(LOAD_GPIO_Port, LOAD_Pin, GPIO_PIN_RESET);
+		/*HAL_GPIO_WritePin(LOAD_GPIO_Port, LOAD_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(LOAD_GPIO_Port, LOAD_Pin, GPIO_PIN_SET);
 		DATAIN = 0;
 		for (uint8_t i = 0; i < 8; i++) {
@@ -204,7 +205,8 @@ int main(void)
 		
 		// Output
 		LCD_gotoXY(0,0);
-		printf("%02d:%02d:%02d",hour,min,sec);
+		printf("%02d:%02d:%02d",hour,min,sec);*/
+		
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

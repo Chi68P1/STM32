@@ -1,0 +1,51 @@
+D:\IOT -Mechatronics\SerialPortCOM_IOT\SerialPortCOM_IOT\bin\Debug\SerialPortCOM_IOT.exe.config
+D:\IOT -Mechatronics\SerialPortCOM_IOT\SerialPortCOM_IOT\bin\Debug\SerialPortCOM_IOT.exe
+D:\IOT -Mechatronics\SerialPortCOM_IOT\SerialPortCOM_IOT\bin\Debug\SerialPortCOM_IOT.pdb
+D:\IOT -Mechatronics\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.csprojAssemblyReference.cache
+D:\IOT -Mechatronics\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.Form1.resources
+D:\IOT -Mechatronics\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.Properties.Resources.resources
+D:\IOT -Mechatronics\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.csproj.GenerateResource.cache
+D:\IOT -Mechatronics\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.csproj.CoreCompileInputs.cache
+D:\IOT -Mechatronics\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.exe
+D:\IOT -Mechatronics\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.pdb
+E:\HK II_2022_2023\IOT\iot3dung\SerialPortCOM_IOT\SerialPortCOM_IOT\bin\Debug\SerialPortCOM_IOT.exe.config
+E:\HK II_2022_2023\IOT\iot3dung\SerialPortCOM_IOT\SerialPortCOM_IOT\bin\Debug\SerialPortCOM_IOT.exe
+E:\HK II_2022_2023\IOT\iot3dung\SerialPortCOM_IOT\SerialPortCOM_IOT\bin\Debug\SerialPortCOM_IOT.pdb
+E:\HK II_2022_2023\IOT\iot3dung\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.csprojAssemblyReference.cache
+E:\HK II_2022_2023\IOT\iot3dung\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.Form1.resources
+E:\HK II_2022_2023\IOT\iot3dung\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.Properties.Resources.resources
+E:\HK II_2022_2023\IOT\iot3dung\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.csproj.GenerateResource.cache
+E:\HK II_2022_2023\IOT\iot3dung\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.csproj.CoreCompileInputs.cache
+E:\HK II_2022_2023\IOT\iot3dung\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.exe
+E:\HK II_2022_2023\IOT\iot3dung\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.pdb
+C:\Users\Lenovo\Desktop\iot3dung\SerialPortCOM_IOT\SerialPortCOM_IOT\bin\Debug\SerialPortCOM_IOT.exe.config
+C:\Users\Lenovo\Desktop\iot3dung\SerialPortCOM_IOT\SerialPortCOM_IOT\bin\Debug\SerialPortCOM_IOT.exe
+C:\Users\Lenovo\Desktop\iot3dung\SerialPortCOM_IOT\SerialPortCOM_IOT\bin\Debug\SerialPortCOM_IOT.pdb
+C:\Users\Lenovo\Desktop\iot3dung\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Desktop\iot3dung\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.csproj.SuggestedBindingRedirects.cache
+C:\Users\Lenovo\Desktop\iot3dung\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.Form1.resources
+C:\Users\Lenovo\Desktop\iot3dung\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.Properties.Resources.resources
+C:\Users\Lenovo\Desktop\iot3dung\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.csproj.GenerateResource.cache
+C:\Users\Lenovo\Desktop\iot3dung\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\iot3dung\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.exe
+C:\Users\Lenovo\Desktop\iot3dung\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.pdb
+C:\Users\viettran\OneDrive - hcmute.edu.vn\Desktop\SerialPortCOM_IOT\SerialPortCOM_IOT\bin\Debug\SerialPortCOM_IOT.exe.config
+C:\Users\viettran\OneDrive - hcmute.edu.vn\Desktop\SerialPortCOM_IOT\SerialPortCOM_IOT\bin\Debug\SerialPortCOM_IOT.exe
+C:\Users\viettran\OneDrive - hcmute.edu.vn\Desktop\SerialPortCOM_IOT\SerialPortCOM_IOT\bin\Debug\SerialPortCOM_IOT.pdb
+C:\Users\viettran\OneDrive - hcmute.edu.vn\Desktop\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.csprojAssemblyReference.cache
+C:\Users\viettran\OneDrive - hcmute.edu.vn\Desktop\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.Form1.resources
+C:\Users\viettran\OneDrive - hcmute.edu.vn\Desktop\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.Properties.Resources.resources
+C:\Users\viettran\OneDrive - hcmute.edu.vn\Desktop\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.csproj.GenerateResource.cache
+C:\Users\viettran\OneDrive - hcmute.edu.vn\Desktop\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.csproj.CoreCompileInputs.cache
+C:\Users\viettran\OneDrive - hcmute.edu.vn\Desktop\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.exe
+C:\Users\viettran\OneDrive - hcmute.edu.vn\Desktop\SerialPortCOM_IOT\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.pdb
+C:\Users\Asus\Desktop\SerialPortCOM_IOT (1)\SerialPortCOM_IOT\bin\Debug\SerialPortCOM_IOT.exe.config
+C:\Users\Asus\Desktop\SerialPortCOM_IOT (1)\SerialPortCOM_IOT\bin\Debug\SerialPortCOM_IOT.exe
+C:\Users\Asus\Desktop\SerialPortCOM_IOT (1)\SerialPortCOM_IOT\bin\Debug\SerialPortCOM_IOT.pdb
+C:\Users\Asus\Desktop\SerialPortCOM_IOT (1)\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.csprojAssemblyReference.cache
+C:\Users\Asus\Desktop\SerialPortCOM_IOT (1)\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.Form1.resources
+C:\Users\Asus\Desktop\SerialPortCOM_IOT (1)\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.Properties.Resources.resources
+C:\Users\Asus\Desktop\SerialPortCOM_IOT (1)\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.csproj.GenerateResource.cache
+C:\Users\Asus\Desktop\SerialPortCOM_IOT (1)\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\SerialPortCOM_IOT (1)\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.exe
+C:\Users\Asus\Desktop\SerialPortCOM_IOT (1)\SerialPortCOM_IOT\obj\Debug\SerialPortCOM_IOT.pdb

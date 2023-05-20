@@ -1,0 +1,10 @@
+E:\IoT\SerialCommunication\SerialCommunication\obj\Debug\SerialCommunication.csprojAssemblyReference.cache
+E:\IoT\SerialCommunication\SerialCommunication\obj\Debug\SerialCommunication.Form1.resources
+E:\IoT\SerialCommunication\SerialCommunication\obj\Debug\SerialCommunication.Properties.Resources.resources
+E:\IoT\SerialCommunication\SerialCommunication\obj\Debug\SerialCommunication.csproj.GenerateResource.cache
+E:\IoT\SerialCommunication\SerialCommunication\obj\Debug\SerialCommunication.csproj.CoreCompileInputs.cache
+E:\IoT\SerialCommunication\SerialCommunication\bin\Debug\SerialCommunication.exe.config
+E:\IoT\SerialCommunication\SerialCommunication\bin\Debug\SerialCommunication.exe
+E:\IoT\SerialCommunication\SerialCommunication\bin\Debug\SerialCommunication.pdb
+E:\IoT\SerialCommunication\SerialCommunication\obj\Debug\SerialCommunication.exe
+E:\IoT\SerialCommunication\SerialCommunication\obj\Debug\SerialCommunication.pdb

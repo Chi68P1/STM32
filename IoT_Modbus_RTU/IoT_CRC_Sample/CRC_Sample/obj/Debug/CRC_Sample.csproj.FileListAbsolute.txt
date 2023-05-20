@@ -1,0 +1,14 @@
+E:\IoT\CRC_Sample\CRC_Sample\obj\Debug\CRC_Sample.csprojAssemblyReference.cache
+E:\IoT\CRC_Sample\CRC_Sample\obj\Debug\CRC_Sample.csproj.CoreCompileInputs.cache
+E:\IoT\CRC_Sample\CRC_Sample\bin\Debug\CRC_Sample.exe.config
+E:\IoT\CRC_Sample\CRC_Sample\bin\Debug\CRC_Sample.exe
+E:\IoT\CRC_Sample\CRC_Sample\bin\Debug\CRC_Sample.pdb
+E:\IoT\CRC_Sample\CRC_Sample\obj\Debug\CRC_Sample.exe
+E:\IoT\CRC_Sample\CRC_Sample\obj\Debug\CRC_Sample.pdb
+C:\Users\Asus\Documents\STM32\IoT_CRC_Sample\CRC_Sample\obj\Debug\CRC_Sample.csprojAssemblyReference.cache
+C:\Users\Asus\Documents\STM32\IoT_CRC_Sample\CRC_Sample\obj\Debug\CRC_Sample.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Documents\STM32\IoT_CRC_Sample\CRC_Sample\obj\Debug\CRC_Sample.exe
+C:\Users\Asus\Documents\STM32\IoT_CRC_Sample\CRC_Sample\obj\Debug\CRC_Sample.pdb
+C:\Users\Asus\Documents\STM32\IoT_CRC_Sample\CRC_Sample\bin\Debug\CRC_Sample.exe.config
+C:\Users\Asus\Documents\STM32\IoT_CRC_Sample\CRC_Sample\bin\Debug\CRC_Sample.exe
+C:\Users\Asus\Documents\STM32\IoT_CRC_Sample\CRC_Sample\bin\Debug\CRC_Sample.pdb

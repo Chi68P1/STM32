@@ -1,0 +1,10 @@
+E:\IoT\Modbus_RTU\Modbus_RTU\Modbus_RTU\bin\Debug\Modbus_RTU.exe.config
+E:\IoT\Modbus_RTU\Modbus_RTU\Modbus_RTU\bin\Debug\Modbus_RTU.exe
+E:\IoT\Modbus_RTU\Modbus_RTU\Modbus_RTU\bin\Debug\Modbus_RTU.pdb
+E:\IoT\Modbus_RTU\Modbus_RTU\Modbus_RTU\obj\Debug\Modbus_RTU.csprojAssemblyReference.cache
+E:\IoT\Modbus_RTU\Modbus_RTU\Modbus_RTU\obj\Debug\Modbus_RTU.Form1.resources
+E:\IoT\Modbus_RTU\Modbus_RTU\Modbus_RTU\obj\Debug\Modbus_RTU.Properties.Resources.resources
+E:\IoT\Modbus_RTU\Modbus_RTU\Modbus_RTU\obj\Debug\Modbus_RTU.csproj.GenerateResource.cache
+E:\IoT\Modbus_RTU\Modbus_RTU\Modbus_RTU\obj\Debug\Modbus_RTU.csproj.CoreCompileInputs.cache
+E:\IoT\Modbus_RTU\Modbus_RTU\Modbus_RTU\obj\Debug\Modbus_RTU.exe
+E:\IoT\Modbus_RTU\Modbus_RTU\Modbus_RTU\obj\Debug\Modbus_RTU.pdb

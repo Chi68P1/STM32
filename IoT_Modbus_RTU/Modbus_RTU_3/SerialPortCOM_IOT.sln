@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.33026.149
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialPortCOM_IOT", "SerialPortCOM_IOT\SerialPortCOM_IOT.csproj", "{80CD4ED0-AD00-46B2-8ADE-3D2B77CF61A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80CD4ED0-AD00-46B2-8ADE-3D2B77CF61A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80CD4ED0-AD00-46B2-8ADE-3D2B77CF61A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80CD4ED0-AD00-46B2-8ADE-3D2B77CF61A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80CD4ED0-AD00-46B2-8ADE-3D2B77CF61A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {17BFF1FB-0897-4AAB-BD25-8E533E6E72DB}
+	EndGlobalSection
+EndGlobal
