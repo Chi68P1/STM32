@@ -22,10 +22,16 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
-//struct __FILE
-//{
+struct __FILE
+{
   int handle;
-//};	
+  /* Whatever you require here. If the only file you are using is */
+  /* standard output using printf() for debugging, no file handling */
+  /* is required. */
+};
+/* FILE is typedef?d in stdio.h. */
+FILE __stdout;
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -49,13 +55,36 @@ TIM_HandleTypeDef htim1;
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
-FILE __stdout;
-int fputc(int ch, FILE *f)
+typedef struct
 {
-  HAL_UART_Transmit(&huart1,(uint8_t *)&ch, 1, 100);
-  return ch;
-}
+  uint32_t BaudRate;                  /*!< This member configures the UART communication baud rate.
+                                           The baud rate is computed using the following formula:
+                                           - IntegerDivider = ((PCLKx) / (16 * (huart->Init.BaudRate)))
+                                           - FractionalDivider = ((IntegerDivider - ((uint32_t) IntegerDivider)) * 16) + 0.5 */
 
+  uint32_t WordLength;                /*!< Specifies the number of data bits transmitted or received in a frame.
+                                           This parameter can be a value of @ref UART_Word_Length */
+
+  uint32_t StopBits;                  /*!< Specifies the number of stop bits transmitted.
+                                           This parameter can be a value of @ref UART_Stop_Bits */
+
+  uint32_t Parity;                    /*!< Specifies the parity mode.
+                                           This parameter can be a value of @ref UART_Parity
+                                           @note When parity is enabled, the computed parity is inserted
+                                                 at the MSB position of the transmitted data (9th bit when
+                                                 the word length is set to 9 data bits; 8th bit when the
+                                                 word length is set to 8 data bits). */
+	uint32_t 			Delay;											/* Delay between bit send/receive */
+	GPIO_TypeDef 	*TX_port;
+	uint16_t 			TX_pin;
+	GPIO_TypeDef 	*RX_port;
+	uint16_t 			RX_pin;
+} SoftUART_TypeDef;
+
+SoftUART_TypeDef suart1;
+
+uint8_t s1[] = "my";
+uint8_t s2[] = "teacher";
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -63,22 +92,81 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_TIM1_Init(void);
 static void MX_USART1_UART_Init(void);
+static void SoftUART_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void Delay_BAUD(uint32_t  BAUD) {
-  htim1.Init.Period =(uint32_t) (1000000/BAUD*0.25)-1;
-	if (__HAL_TIM_GET_FLAG(&htim1, TIM_FLAG_UPDATE)) {
-		HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_0);
-		__HAL_TIM_CLEAR_FLAG(&htim1, TIM_FLAG_UPDATE);
+	
+void SoftUART_Transmit(uint8_t ch) {
+	// START bit
+	HAL_GPIO_WritePin(suart1.TX_port, suart1.TX_pin, GPIO_PIN_RESET);
+	__HAL_TIM_SET_COUNTER(&htim1,0);
+	while (__HAL_TIM_GET_COUNTER(&htim1) < suart1.Delay) ;
+	// Data bits
+	for (uint8_t i =0; i < 8; i++) 
+	{
+		HAL_GPIO_WritePin(suart1.TX_port, suart1.TX_pin,(GPIO_PinState)(ch&(1<<i)));
+		__HAL_TIM_SET_COUNTER(&htim1,0);
+		while (__HAL_TIM_GET_COUNTER(&htim1) < suart1.Delay) ;
+	}
+	
+	// STOP bit
+	HAL_GPIO_WritePin(suart1.TX_port, suart1.TX_pin, GPIO_PIN_SET);
+	__HAL_TIM_SET_COUNTER(&htim1,0);
+	while (__HAL_TIM_GET_COUNTER(&htim1) < suart1.Delay) ;
+}
+
+void SoftUART_print(SoftUART_TypeDef *suart, uint8_t *s) {
+	uint32_t i=0;
+	while (*(s+i) != 0) {
+		SoftUART_Transmit(*(s+i));
+		i=i+1;
 	}
 }
 
- void SoftUART_Transmit(uint8_t ch) {}
-	 HAL_	
+int fputc(int ch, FILE *f) 
+{
+  SoftUART_Transmit(*(uint8_t *)&ch);
+  return ch;
+}
+
+uint8_t SoftUART_getc(SoftUART_TypeDef *suart, uint32_t timeouttick) {
+	uint32_t BaudTick;
+	uint8_t ReceivedByte;
+	// wait for Start (LOW) signal
+		__HAL_TIM_SET_COUNTER(&htim1,0);
+	while(0 != HAL_GPIO_ReadPin(suart->RX_port, suart->RX_pin)) {
+		if (__HAL_TIM_GET_COUNTER(&htim1) > suart->Delay) {
+			if (timeouttick>0) {
+				timeouttick = timeouttick - 1;
+			}
+			else {
+				return 0;  // Timeout return 0
+			}
+		}
+	}
+	
+	__HAL_TIM_SET_COUNTER(&htim1,0);
+	while (__HAL_TIM_GET_COUNTER(&htim1) < 3*(suart->Delay)/2);
+	
+	for (uint8_t i=0;i<8;i++) {
+		ReceivedByte = ReceivedByte|(HAL_GPIO_ReadPin(suart->RX_port, suart->RX_pin)<<i);
+		__HAL_TIM_SET_COUNTER(&htim1,0);
+		while (__HAL_TIM_GET_COUNTER(&htim1) < (suart->Delay));
+	}
+	
+		__HAL_TIM_SET_COUNTER(&htim1,0);
+	while (__HAL_TIM_GET_COUNTER(&htim1) < (suart->Delay)/2);
+	
+	// wait for release (HIGH) signal
+	while(0 == HAL_GPIO_ReadPin(suart->RX_port, suart->RX_pin));
+	
+	return ReceivedByte;
+}
+
 /* USER CODE END 0 */
 
 /**
@@ -112,16 +200,32 @@ int main(void)
   MX_TIM1_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
+	SoftUART_Init();
+	HAL_GPIO_WritePin(TX_GPIO_Port, TX_Pin, GPIO_PIN_SET);
 	HAL_TIM_Base_Start(&htim1);
-  /* USER CODE END 2 */
+  uint8_t ch = 0;
+	
+	SoftUART_Transmit('h');
+	SoftUART_Transmit('e');
+	SoftUART_Transmit('l');
+	SoftUART_Transmit('l');
+	SoftUART_Transmit('o');
+	SoftUART_Transmit(' ');
+
+	printf("%s",s1);
+	SoftUART_Transmit(' ');
+	
+	SoftUART_print(&suart1,(uint8_t *)s2);
+/* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+		
     /* USER CODE END WHILE */
-		Delay_BAUD(110);
-		printf("%d ",htim1.Init.Period);
+    ch = SoftUART_getc(&suart1,HAL_MAX_DELAY);
+		printf("%c",ch);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -276,7 +380,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin : RX_Pin */
   GPIO_InitStruct.Pin = RX_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(RX_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PA2 PA3 PA4 PA5
@@ -304,7 +408,18 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+static void SoftUART_Init(void) {
+	#define TIMTICKUS	0.25	
+  suart1.BaudRate = 9600;
+	suart1.Delay = (1000000/suart1.BaudRate)/TIMTICKUS - 24;
+  suart1.WordLength = UART_WORDLENGTH_8B;
+  suart1.StopBits = UART_STOPBITS_1;
+  suart1.Parity = UART_PARITY_NONE;
+	suart1.TX_port = GPIOA;
+	suart1.TX_pin	= GPIO_PIN_0;
+	suart1.RX_port = GPIOA;
+	suart1.RX_pin	= GPIO_PIN_1;
+}
 /* USER CODE END 4 */
 
 /**

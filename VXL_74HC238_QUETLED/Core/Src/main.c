@@ -118,7 +118,6 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-		
 		displayDigit(0, 1, 1, 0, 1, 1, 0, 1);
 
 		displayDigit(1, 1, 1, 1, 1, 1, 1, 0);
@@ -134,7 +133,6 @@ int main(void)
 		displayDigit(6, 1, 1, 1, 0, 0, 0, 0);
 
 		displayDigit(7, 1, 1, 1, 1, 0, 1, 1);
-
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

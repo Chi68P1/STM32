@@ -149,7 +149,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-		printf ("Integers: %i %u \n", -3456, 3456);
+		printf ("Integers: %i %u \n", -3456, (GPIO_PinState)3456);
 		printf ("Characters: %c %c \n", 'z', 80);
 		printf ("Decimals: %d %ld\n", 1997, 32000L);
 		printf ("Some different radices: %d %x %o %#x %#o \n", 100, 100, 100, 100, 100);

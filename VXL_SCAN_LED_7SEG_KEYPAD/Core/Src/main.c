@@ -238,13 +238,13 @@ int main(void)
 		if (read_Keypad() ==0) LED_display(10 ,7); // tat
 		else LED_display(read_Keypad()%10 ,7);
 		
-		if (read_Keypad()/10 ==0) LED_display(10 ,7);
+		if (read_Keypad()/10 ==0) LED_display(10 ,5);
 		else LED_display((read_Keypad()/10)%10 ,5);
 		
-		if (read_Keypad()/100 ==0) LED_display(10 ,7);
+		if (read_Keypad()/100 ==0) LED_display(10 ,3);
 		else LED_display((read_Keypad()/100)%10,3);
 		
-		if (read_Keypad()/1000 ==0) LED_display(10 ,7);
+		if (read_Keypad()/1000 ==0) LED_display(10 ,2);
 		else LED_display((read_Keypad()/1000)%10,2);
 
     /* USER CODE BEGIN 3 */

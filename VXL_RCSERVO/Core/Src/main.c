@@ -114,7 +114,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-		RCservo(50);
+		RCservo(0);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

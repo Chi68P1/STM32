@@ -128,7 +128,7 @@ int main(void)
 		  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 			HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 			HAL_GPIO_WritePin(GPIOA,GPIO_PIN_1,GPIO_PIN_RESET);
-			HAL_Delay(29);
+			HAL_Delay(19);
 		
 			GPIO_InitStruct.Pin = GPIO_PIN_1;
 			GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
