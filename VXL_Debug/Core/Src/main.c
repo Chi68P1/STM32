@@ -149,22 +149,8 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-		printf ("Integers: %i %u \n", -3456, (GPIO_PinState)3456);
-		printf ("Characters: %c %c \n", 'z', 80);
-		printf ("Decimals: %d %ld\n", 1997, 32000L);
-		printf ("Some different radices: %d %x %o %#x %#o \n", 100, 100, 100, 100, 100);
-		printf ("floats: %4.2f %+.0e %E \n", 3.14159, 3.14159, 3.14159);
-		printf ("Preceding with empty spaces: %10d \n", 1997);
-		printf ("Preceding with zeros: %010d \n", 1997);
-		printf ("Width: %*d \n", 15, 140);
-		printf ("%s \n", " A string ");
+		printf("hello");
 		HAL_Delay(1000);
-		
-		int ch;
-		for( ch = 75 ; ch <= 100; ch++ ) {
-			printf("ASCII value = %d, Character = %c\n", ch , ch );
-		}
-		HAL_Delay(100000);
 		/*
 		HAL_UART_Transmit_IT(&huart1, (uint8_t*) &i8, a);
 		HAL_Delay(1000);

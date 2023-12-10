@@ -1,0 +1,24 @@
+--cpu Cortex-M3
+"f103c8t6_velocity\startup_stm32f103xb.o"
+"f103c8t6_velocity\main.o"
+"f103c8t6_velocity\stm32f1xx_it.o"
+"f103c8t6_velocity\stm32f1xx_hal_msp.o"
+"f103c8t6_velocity\stm32f1xx_hal_gpio_ex.o"
+"f103c8t6_velocity\stm32f1xx_hal_tim.o"
+"f103c8t6_velocity\stm32f1xx_hal_tim_ex.o"
+"f103c8t6_velocity\stm32f1xx_hal.o"
+"f103c8t6_velocity\stm32f1xx_hal_rcc.o"
+"f103c8t6_velocity\stm32f1xx_hal_rcc_ex.o"
+"f103c8t6_velocity\stm32f1xx_hal_gpio.o"
+"f103c8t6_velocity\stm32f1xx_hal_dma.o"
+"f103c8t6_velocity\stm32f1xx_hal_cortex.o"
+"f103c8t6_velocity\stm32f1xx_hal_pwr.o"
+"f103c8t6_velocity\stm32f1xx_hal_flash.o"
+"f103c8t6_velocity\stm32f1xx_hal_flash_ex.o"
+"f103c8t6_velocity\stm32f1xx_hal_exti.o"
+"f103c8t6_velocity\stm32f1xx_hal_uart.o"
+"f103c8t6_velocity\system_stm32f1xx.o"
+--strict --scatter "F103C8T6_Velocity\F103C8T6_Velocity.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "F103C8T6_Velocity.map" -o F103C8T6_Velocity\F103C8T6_Velocity.axf

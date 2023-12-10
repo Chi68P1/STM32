@@ -1,0 +1,24 @@
+--cpu Cortex-M3
+"servopractic_position_control\startup_stm32f103xe.o"
+"servopractic_position_control\main.o"
+"servopractic_position_control\stm32f1xx_it.o"
+"servopractic_position_control\stm32f1xx_hal_msp.o"
+"servopractic_position_control\stm32f1xx_hal_gpio_ex.o"
+"servopractic_position_control\stm32f1xx_hal_tim.o"
+"servopractic_position_control\stm32f1xx_hal_tim_ex.o"
+"servopractic_position_control\stm32f1xx_hal.o"
+"servopractic_position_control\stm32f1xx_hal_rcc.o"
+"servopractic_position_control\stm32f1xx_hal_rcc_ex.o"
+"servopractic_position_control\stm32f1xx_hal_gpio.o"
+"servopractic_position_control\stm32f1xx_hal_dma.o"
+"servopractic_position_control\stm32f1xx_hal_cortex.o"
+"servopractic_position_control\stm32f1xx_hal_pwr.o"
+"servopractic_position_control\stm32f1xx_hal_flash.o"
+"servopractic_position_control\stm32f1xx_hal_flash_ex.o"
+"servopractic_position_control\stm32f1xx_hal_exti.o"
+"servopractic_position_control\stm32f1xx_hal_uart.o"
+"servopractic_position_control\system_stm32f1xx.o"
+--strict --scatter "ServoPractic_Position_Control\ServoPractic_Position_Control.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "ServoPractic_Position_Control.map" -o ServoPractic_Position_Control\ServoPractic_Position_Control.axf
