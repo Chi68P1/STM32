@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"dcservo\startup_stm32f103xe.o"
+"dcservo\main.o"
+"dcservo\stm32f1xx_it.o"
+"dcservo\stm32f1xx_hal_msp.o"
+"dcservo\system_stm32f1xx.o"
+"dcservo\stm32f1xx_hal_gpio_ex.o"
+"dcservo\stm32f1xx_hal_tim.o"
+"dcservo\stm32f1xx_hal_tim_ex.o"
+"dcservo\stm32f1xx_hal.o"
+"dcservo\stm32f1xx_hal_rcc.o"
+"dcservo\stm32f1xx_hal_rcc_ex.o"
+"dcservo\stm32f1xx_hal_gpio.o"
+"dcservo\stm32f1xx_hal_dma.o"
+"dcservo\stm32f1xx_hal_cortex.o"
+"dcservo\stm32f1xx_hal_pwr.o"
+"dcservo\stm32f1xx_hal_flash.o"
+"dcservo\stm32f1xx_hal_flash_ex.o"
+"dcservo\stm32f1xx_hal_uart.o"
+--library_type=microlib --strict --scatter "DCservo\DCservo.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "DCservo.map" -o DCservo\DCservo.axf
